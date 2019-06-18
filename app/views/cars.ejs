@@ -1,8 +1,41 @@
 <% include header %>
 
-  <h1>Cars:</h1>
-  <% for(var i = 0; i < 3; i++) { %>
-    <p><%-cars[i].mark %></p>
-  <% } %>
+  <h1>Машины в наличии:</h1>
+
+  <table class="table table-dark">
+    <thead>
+ 
+      <tr>
+        <th scope="row">Номер</th>
+        <th scope="col">Модель</th>
+        <th scope="col">Год</th>
+        <th scope="col">Фото</th>
+      </tr>
+
+
+    </thead>
+    <tbody>
+        <% for(var i = 0; i < cars.length; i++) { %>
+      <tr>
+        <td scope="row"><%-i %></td>
+        <td><%-cars[i].mark %></td>
+        <td><%-cars[i].year %></td>
+        <% if(i==0) { %>
+          <td><p><img src="https://a.allegroimg.com/s128/03ceb0/92a75f1b424fa550ef2f1e06bcbf"></p></td>
+        <% } %>
+
+        <% if(i==1) { %>
+          <td><p><img src="https://img.olx.com.br/thumbs256x256/36/364920008744185.jpg"></p></td>
+        <% } %>
+
+        <% if(i==2) { %>
+          <td><p><img src="http://www.lada-largus.com/images/F-PpStL2iJc.jpg"></p></td>
+        <% } %>
+
+      </tr>
+      <% } %>
+    </tbody>
+  </table>
+
 
 <% include footer %>
