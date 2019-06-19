@@ -1,10 +1,20 @@
 <% include header %>
 
-  <h1><%-title %></h1>
-  <p>Welcome to <%-title %></p>
-  <h2>Articles:</h2>
-  <% for(var i = 0; i < 3; i++) { %>
-    <p><%-articles[i].title %></p>
-  <% } %>
+<title>Градиент</title>
+  <style>
+   body {
+    background: black;
+    background: linear-gradient( black 50%, white 50%);
+    background-size: 50px 50px;
+   }
+  </style>
+
+ <p> На нашем сайте Вы можете купить машины с пробегом!</p>
+   <p>Воспользуйтесь поиском, чтобы найти оптимальный для себя вариант.</p>
+   <body style="color:red">
+   <p><a class="nav-link" href="/cars" ><img src="http://1541.ru/images/buybutton(10).png" ></a></p>
+   
+  
 
 <% include footer %>
+
